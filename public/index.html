@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo!</title>
+</head>
+<body>
+  <h3>Upload a new image:</h3>
+  <form method="post" enctype="multipart/form-data" action="/upload">
+    <input type="file" name="file">
+    <input type="submit" value="Submit">
+  </form>
+  <h3>The current image is:</h3>
+  <img src="/image.png" />
+</body>
+</html>
