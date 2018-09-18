@@ -3,6 +3,7 @@
 set -e
 
 while read ip; do
+  [[ $ip == "#"* ]] && echo "skipping $ip" && continue
   cat "`dirname $0 `"/_deploy | ssh -A -T -i ~/.ssh/adwerx.pem ubuntu@$ip
   echo "$ip - success"
 done < "`dirname $0 `"/_ips

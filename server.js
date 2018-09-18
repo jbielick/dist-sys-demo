@@ -19,10 +19,7 @@ app.use(express.static('public/uploads'));
 
 const handleError = (err, res) => {
   console.log(err);
-  res
-    .status(500)
-    .contentType("text/plain")
-    .end("Oops! Something went wrong!");
+  res.status(500).json(err);
 };
 
 const upload = multer({ dest: path.join(__dirname, 'tmp') });
