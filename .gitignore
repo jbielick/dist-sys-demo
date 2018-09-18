@@ -63,4 +63,4 @@ typings/
 
 script/_ips
 
-public/uploads
+public/uploads/*
